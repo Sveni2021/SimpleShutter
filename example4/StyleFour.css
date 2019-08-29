@@ -1,0 +1,94 @@
+.color_h {
+    background-color: khaki;
+}
+
+.position {
+    position: absolute;
+}
+
+.container {
+    top: 550px;
+    height: 180px;
+    width: 110px;
+}
+
+.color_l1 {
+    background-color: darkcyan;
+}
+
+.color_l2 {
+    background-color: cyan;
+}
+
+.size {
+    width: 20px;
+    height: 30px;
+}
+
+.body {
+    top: 50px;
+    left: 40px;
+    width: 20px;
+    height: 60px;
+    background-color: red;
+}
+
+.leg1 {
+    left: 40px;
+    top: 110px;
+}
+
+.leg2 {
+    left: 40px;
+    top: 110px;
+}
+
+.leg3 {
+    left: 40px;
+    top: 140px;
+}
+
+.leg4 {
+    left: 40px;
+    top: 140px;
+}
+
+.hand1 {
+    background-color: indianred;
+    top: 50px;
+    left: 40px;
+    width: 40px;
+    height: 20px;
+}
+
+.hand2 {
+    background-color: khaki;
+    top: 50px;
+    left: 80px;
+    width: 20px;
+    height: 20px;
+}
+
+.head {
+    top: 20px;
+    left: 40px;
+    width: 30px;
+    height: 30px;
+}
+
+.trunk {
+    top: 40px;
+    left: 80px;
+    height: 10px;
+    width: 40px;
+    background-color: black;
+}
+
+.jump {
+    left: 8px;
+    top: 35px;
+    height: 20px;
+    width: 80px;
+}
+
+.color_box
