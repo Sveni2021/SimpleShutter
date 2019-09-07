@@ -7,7 +7,7 @@
 }
 
 .container {
-    top: 550px;
+    top: 750px;
     height: 180px;
     width: 110px;
 }
@@ -91,4 +91,23 @@
     width: 80px;
 }
 
-.color_box
+.stop {
+    left: 8px;
+    top: 62px;
+    height: 25px;
+    width: 80px;
+}
+
+.bullet {
+    width: 10px;
+    height: 8px;
+    background-color: dimgray;
+}
+
+.fire {
+    left: 96px;
+    top: 8px;
+    height: 45px;
+    width: 60px;
+    font-size: 20px;
+}
