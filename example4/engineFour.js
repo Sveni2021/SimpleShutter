@@ -46,6 +46,12 @@ const engineTimer = setInterval(() => {
     leg2.style.left = `${xPositionLeg2}px`;
     leg3.style.left = `${xPositionLeg3}px`;
     leg4.style.left = `${xPositionLeg4}px`;
+    if (number === 0) {
+        xPositionB = xPosition + 80;
+        yPositionB = yPosition + 41;
+
+    }
+    //Прыжок
     if (yNumber === 1) {
         yPosition -= 50;
         if (yPosition === 650) {
@@ -57,7 +63,7 @@ const engineTimer = setInterval(() => {
             yNumber = 0;
         }
     }
-    //Движение Человечка
+    //Движение человечка влево и вправо
     if (count === 0) {
         if (xNumber === 1) {
             xPosition += speed;
@@ -107,10 +113,7 @@ const engineTimerTwo = setInterval(() => {
     bullet.style.left = `${xPositionB}px`;
     bullet.style.top = `${yPositionB}px`;
     //Движение Пули
-    if (number === 0) {
-        xPositionB = xPosition + 80;
-        yPositionB = yPosition + 41;
-    } else {
+    if (number >= 1) {
         xPositionB += 10;
         yPositionB = yPositionB;
     }
