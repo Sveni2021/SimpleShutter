@@ -10,35 +10,40 @@ let xNumber = 0;
 let count = 0;
 let speed = 20;
 let xPosition = 0;
-let yPosition = 750;
-let xPositionB = 0;
-let yPositionB = 750;
+let yPosition = 550;
+let xPositionB = xPosition + 110;
+let yPositionB = yPosition + 41;
 let xPositionLeg1 = 40;
 let xPositionLeg2 = 40;
 let xPositionLeg3 = 40;
 let xPositionLeg4 = 40;
-xPositionB = xPosition + 110;
-yPositionB = yPosition + 41;
+
+//function which activated when  onclick on button "fire".
 function fire() {
     number = 1;
 }
 
+//function which activated when  onclick on button "jump".
 function jump() {
     yNumber++
 }
 
+//function which activated when  onclick on button "stop".
 function stop() {
     xNumber = 0;
 }
 
+//function which activated when  onclick on button "left".
 function left() {
     xNumber = -1;
 }
 
+//function which activated when  onclick on button "right".
 function right() {
     xNumber = 1;
 }
 
+//Move human jump, go right and left.
 const engineTimer = setInterval(() => {
     container.style.left = `${xPosition}px`;
     container.style.top = `${yPosition}px`;
@@ -51,26 +56,27 @@ const engineTimer = setInterval(() => {
         yPositionB = yPosition + 41;
 
     }
-    //Прыжок
     if (yNumber === 1) {
         yPosition -= 50;
-        if (yPosition === 650) {
+        if (yPosition === 450) {
+            yPosition = 450;
             yNumber = 2;
         }
-    } else if (yNumber === 2) {
+    }
+    if (yNumber === 2) {
         yPosition += 50;
-        if (yPosition === 750) {
+        if (yPosition >= 550) {
+            yPosition = 550;
             yNumber = 0;
         }
     }
-    //Движение человечка влево и вправо
     if (count === 0) {
         if (xNumber === 1) {
             xPosition += speed;
         } else if (xNumber === -1) {
             xPosition -= speed;
         }
-        if (xNumber === 1 || xNumber === - 1){
+        if (xNumber === 1 || xNumber === -1) {
             xPositionLeg1 = 30;
             xPositionLeg2 = 50;
             xPositionLeg3 = 20;
@@ -87,7 +93,7 @@ const engineTimer = setInterval(() => {
         } else if (xNumber === -1) {
             xPosition -= speed;
         }
-        if (xNumber === 1 || xNumber === - 1){
+        if (xNumber === 1 || xNumber === -1) {
             xPositionLeg1 = 50;
             xPositionLeg2 = 30;
             xPositionLeg3 = 60;
@@ -105,19 +111,18 @@ const engineTimer = setInterval(() => {
             xNumber = -1;
         }
     }
-    console.log(xNumber);
+    console.log(yNumber);
     count++;
 }, 200);
-
+//Move bullet.
 const engineTimerTwo = setInterval(() => {
     bullet.style.left = `${xPositionB}px`;
     bullet.style.top = `${yPositionB}px`;
-    //Движение Пули
     if (number >= 1) {
         xPositionB += 10;
         yPositionB = yPositionB;
     }
-    if (xPositionB >= 2000) {
+    if (xPositionB >= 1600) {
         number = 0;
     }
 }, 10);
